@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeopardy Game</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add your custom CSS if needed -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">SRNA Jeopardy!!</h1>
+        <!-- Create a score display -->
+        <div id="score" class="text-center mt-3">
+            Score: <span id="scoreValue">0</span>
+        </div>
+        <!-- Create the game board -->
+        <div id="game-board" class="mt-4">
+            <!-- Create a table to represent the game board -->
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Easy</th>
+                        <th>Medium</th>
+                        <th>Hard</th>
+                        <th>OH Lord</th>
+                        <th>I CANT WAIT FOR CLINICALS</th>
+                        <th>Please! Im just a first year!</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Use JavaScript to populate questions and answers -->
+                    <!-- Example cell for the first row and first category -->
+                    <tr>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">1</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">1</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">1</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">1</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">1</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">1</td>                       
+                    </tr>
+                    <tr>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">2</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">2</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">2</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">2</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">2</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">2</td>                       
+                    </tr>
+                    <tr>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">3</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">3</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">3</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">3</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">3</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">3</td>                       
+                    </tr>
+                    <tr>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">4</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">4</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">4</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">4</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">4</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">4</td>                       
+                    </tr>
+                    <tr>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">5</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">5</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">5</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">5</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">5</td>
+                        <td data-toggle="modal" data-target="#questionModal" data-question="What is the capital of France?" data-answer="Paris">5</td>                       
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="questionModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="questionModalLabel">Question</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                   
+                    <p id="modalQuestion"></p>
+                    
+                    <input type="text" id="userAnswer" class="form-control" placeholder="Your Answer">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="checkAnswer">Check Answer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
