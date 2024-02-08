@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const question = cell.getAttribute("data-question");
             const answer = cell.getAttribute("data-answer");
 
-            // Update the modal content with the question
+            
             modalQuestion.textContent = question;
             userAnswerInput.value = ""; // Clear the user's previous answer
 
